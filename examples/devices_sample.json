@@ -9,7 +9,7 @@
       "mac": "EC:D6:8A:CA:EE:20",
       "ip_hint": "192.168.31.241",
       "raw_hostname": "DESKTOP-28AGCCU",
-      "alias": "Win11-Main",
+      "alias": "Host-Node-241-Win11",
       "desc": "Win11 主力台式工作站 (有线千兆接入)",
       "role": "核心开发终端 / 实验主控机",
       "type": "desktop"
@@ -18,8 +18,8 @@
       "mac": "00:E0:4C:68:00:0C",
       "ip_hint": "192.168.31.50",
       "raw_hostname": "mac",
-      "alias": "MBP-Wired",
-      "desc": "MacBook Pro (USB-C 转 RJ45 有线千兆网卡)",
+      "alias": "Host-Node-50-Debian13",
+      "desc": "MacBook Pro (USB-C 转 RJ45 有线千兆网卡，Debian 13)",
       "role": "便携工作站-有线高速链路",
       "type": "laptop"
     },
@@ -27,8 +27,8 @@
       "mac": "4C:32:75:99:69:E9",
       "ip_hint": "192.168.31.51",
       "raw_hostname": "SSID1",
-      "alias": "MBP-WiFi",
-      "desc": "MacBook Pro (主板自带 802.11 Wi-Fi 网卡)",
+      "alias": "Host-Node-51-Debian13",
+      "desc": "MacBook Pro (主板自带 802.11 Wi-Fi 网卡，Debian 13)",
       "role": "便携工作站-无线漫游链路",
       "type": "laptop"
     },
@@ -36,8 +36,8 @@
       "mac": "00:E0:B4:1A:24:0E",
       "ip_hint": "192.168.31.37",
       "raw_hostname": "worldstory",
-      "alias": "Ubuntu24-Server",
-      "desc": "Ubuntu 24 LTS 常驻 Linux 服务器",
+      "alias": "Host-Node-37-Ubuntu24",
+      "desc": "Ubuntu 24.04 LTS 常驻 Linux 服务器",
       "role": "后台容器宿主机 / 算法与编译节点",
       "type": "server"
     },
@@ -45,8 +45,8 @@
       "mac": "08:6A:C5:DF:4F:C6",
       "ip_hint": "192.168.31.84",
       "raw_hostname": "bawuyinguo",
-      "alias": "Dev-84",
-      "desc": "拨无因果 (局域网嵌入式 / 开发测试设备)",
+      "alias": "Host-Node-84-Ubuntu22",
+      "desc": "拨无因果 (Ubuntu 22.04 LTS 开发测试设备)",
       "role": "测试终端",
       "type": "iot"
     },
@@ -54,8 +54,8 @@
       "mac": "1C:86:0B:34:42:6A",
       "ip_hint": "192.168.31.233",
       "raw_hostname": "zyu",
-      "alias": "IoT-233",
-      "desc": "智能硬件 / 嵌入式开发设备",
+      "alias": "Host-Node-233-Debian13",
+      "desc": "智能硬件 / 嵌入式开发设备 (Debian 13 trixie)",
       "role": "IoT 节点",
       "type": "iot"
     },
@@ -63,8 +63,8 @@
       "mac": "14:DD:A9:56:AC:98",
       "ip_hint": "192.168.31.49",
       "raw_hostname": "fengye",
-      "alias": "Node-49",
-      "desc": "网络备用测试节点",
+      "alias": "Host-Node-49-Debian13",
+      "desc": "网络备用测试节点 (Debian 13)",
       "role": "辅助测试机",
       "type": "node"
     },
@@ -72,7 +72,7 @@
       "mac": "82:C1:8F:B6:FB:0C",
       "ip_hint": "192.168.31.5",
       "raw_hostname": "iPhone",
-      "alias": "Mobile-iPhone",
+      "alias": "Host-Node-5-iOS",
       "desc": "个人主力移动终端",
       "role": "移动终端",
       "type": "phone"
@@ -81,7 +81,7 @@
       "mac": "7E:0E:AD:73:1C:25",
       "ip_hint": "192.168.31.20",
       "raw_hostname": "iQOO",
-      "alias": "Mobile-iQOO",
+      "alias": "Host-Node-20-Android",
       "desc": "Android 备用移动终端",
       "role": "移动测试机",
       "type": "phone"
