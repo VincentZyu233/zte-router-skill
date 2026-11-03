@@ -10,6 +10,15 @@ metadata:
 
 `zte-router` is an agent skill for non-interactive discovery, hardware inspection, and device tracking across ZTE smart routers running the `ZXSLC` WebUI stack (powered by ZTE in-house ZX279128 family processors).
 
+> [!WARNING]
+> **实机验证与兼容性范围 (Works on my machine!)**
+> 本 Skill 仅在作者自用的具体路由器与固件上实测通过：
+> - **实测设备**：中兴 巡天青春版 AX1500 (`ZXSLC SR6001`)
+> - **实测 CPU**：中兴自研双核 ZX279128R
+> - **实测固件**：`V1.0.0.3B3.8000` (硬件版本: `V1.0.0`)
+> 
+> *不保证其他中兴路由器型号或更新后的固件版本可用。*
+
 ---
 
 ## 适用于哪些场景 (When to Use)
