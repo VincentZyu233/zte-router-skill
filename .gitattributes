@@ -1,5 +1,6 @@
-# Force GitHub Linguist to detect and include Markdown in repository language statistics
+# Force GitHub Linguist to detect and include Markdown & JSON in repository language statistics
 *.md linguist-detectable=true
+*.json linguist-detectable=true
 
 # Normalize line endings
 * text=auto eol=lf

@@ -48,8 +48,14 @@ metadata:
 # 查看路由器规格与系统运行时间
 uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --info
 
-# 导出当前在线与历史设备清单
+# 导出当前在线与历史设备清单（默认自动加载 examples/devices_sample.json 元数据）
 uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --devices
+
+# 指定自定义资产字典
+uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --devices --meta examples/devices_sample.json
+
+# 导出当前局域网在线设备骨架为元数据模板
+uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --export-meta devices_template.json
 
 # 输出结构化 JSON 数据供上层程序或 Agent 管道解析
 uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --all --json
@@ -60,4 +66,5 @@ uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --all --json
 ## 模块清单
 
 - `scripts/zte_client.py`: 完整的 Python 客户端类 `ZTERouterClient` 与开箱即用的命令行工具。
+- `examples/devices_sample.json`: 资产元数据映射字典示例（支持 MAC/IP 绑定别名、用途角色及备注说明）。
 - `references/api_spec.md`: 逆向整理的完整 ZXSLC 固件接口文档与 XML 节点字典。

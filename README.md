@@ -26,6 +26,7 @@
 
 - ⚡ **无界面纯自动化**：告别浏览器手动登录，直接通过两阶段动态盐值算法 (`SHA256(Password + dynamic_logintoken)`) 完成身份认证。
 - 🔍 **全量资产秒级发现**：直接调取路由器底层 `localnet_lan_info_lua` 终端表，瞬间获取局域网所有设备的**真实系统主机名**、IP、MAC 地址以及接入端口（有线千兆 / 2.4G / 5G Wi-Fi）。
+- 🏷️ **资产元数据字典与别名注入**：支持接入设备资产字典（`examples/devices_sample.json`），基于 MAC/IP 自动匹配并展示人类友好的别名、用途角色及备注说明；支持一键将当前网络终端导出为元数据模板。
 - 📊 **网络拓扑与硬件规格萃取**：精准获取路由器内部型号（如 `ZXSLC SR6001`）、市场型号、CPU 架构、固件版本、连续运行时间与 WAN 上行链路拓扑。
 - 🤖 **Agent 原生友好**：内置标准 Antigravity [SKILL.md](SKILL.md) 规范，支持命令行 CLI、Python SDK 以及结构化 JSON 输出，天然适配各类 AI Coding Agent 自动化调用。
 
@@ -74,10 +75,16 @@ export ZTE_ROUTER_PASSWORD="your_password_here"
 # 1. 查看路由器硬件信息与连续开机时间
 uv run python scripts/zte_client.py --info
 
-# 2. 列出局域网内所有连接的主机终端（在线状态、MAC、真实主机名）
+# 2. 列出局域网内所有连接的主机终端（自动融合元数据字典，展示在线状态、别名、角色与备注）
 uv run python scripts/zte_client.py --devices
 
-# 3. 输出结构化 JSON 数据供脚本与管道二次解析
+# 3. 指定外部自定义元数据字典
+uv run python scripts/zte_client.py --devices --meta examples/devices_sample.json
+
+# 4. 从当前路由器导出设备清单模板骨架，方便快速编写资产字典
+uv run python scripts/zte_client.py --export-meta my_home_devices.json
+
+# 5. 输出结构化 JSON 数据供脚本与管道二次解析
 uv run python scripts/zte_client.py --all --json
 ```
 
@@ -109,11 +116,13 @@ for dev in devices:
 
 ```text
 zte-router-skill/
-├── .gitattributes          # 强制配置 Markdown 语言统计识别
+├── .gitattributes          # 强制配置 Markdown 与 JSON 语言统计识别
 ├── .gitignore              # Python / OS 临时文件过滤
 ├── LICENSE                 # MIT 开源许可证
 ├── README.md               # 仓库详尽技术文档
 ├── SKILL.md                # Agent Skill 标准规范定义
+├── examples/
+│   └── devices_sample.json # 局域网资产元数据字典示例 (MAC/IP 别名与角色映射)
 ├── scripts/
 │   └── zte_client.py       # Python 客户端类与全功能 CLI 入口
 └── references/
