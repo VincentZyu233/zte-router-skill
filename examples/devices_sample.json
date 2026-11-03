@@ -19,18 +19,18 @@
       "ip_hint": "192.168.31.50",
       "raw_hostname": "mac",
       "alias": "Host-Node-50-Debian13",
-      "desc": "MacBook Pro (USB-C 转 RJ45 有线千兆网卡，Debian 13)",
-      "role": "便携工作站-有线高速链路",
-      "type": "laptop"
+      "desc": "无头骑士 (MacBook Pro 拆屏常驻家里云有线网卡，Debian 13)",
+      "role": "家里云常驻计算节点 (有线链路)",
+      "type": "server"
     },
     {
       "mac": "4C:32:75:99:69:E9",
       "ip_hint": "192.168.31.51",
       "raw_hostname": "SSID1",
       "alias": "Host-Node-51-Debian13",
-      "desc": "MacBook Pro (主板自带 802.11 Wi-Fi 网卡，Debian 13)",
-      "role": "便携工作站-无线漫游链路",
-      "type": "laptop"
+      "desc": "无头骑士 (MacBook Pro 拆屏常驻家里云无线网卡，Debian 13)",
+      "role": "家里云常驻计算节点 (Wi-Fi 漫游链路)",
+      "type": "server"
     },
     {
       "mac": "00:E0:B4:1A:24:0E",
