@@ -9,6 +9,10 @@
 > [!WARNING]
 > **作者实测机型免责声明 (Works on my machine!)**
 >
+> <p align="center">
+>   <img src="docs/images/works-on-my-machine.png" alt="Works on my machine" width="220" />
+> </p>
+>
 > 本项目**仅证明在作者本人的具体路由器机型与当前固件版本上实测可用**（*“Works on my machine!”* 🤷‍♂️）：
 > - **作者实测路由器型号**：**中兴 巡天青春版 AX1500**（内部硬件标识：`ZXSLC SR6001`）
 > - **核心 CPU 主控芯片**：中兴自研双核 `ZX279128R`
