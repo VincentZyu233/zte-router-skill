@@ -41,15 +41,18 @@ metadata:
 
 ## 快速调用命令 (CLI Usage)
 
+> [!TIP]
+> 推荐通过 `uv` 工具链直接运行（无需激活外部虚拟环境）：`uv run python ...`。
+
 ```bash
 # 查看路由器规格与系统运行时间
-python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --info
+uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --info
 
 # 导出当前在线与历史设备清单
-python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --devices
+uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --devices
 
 # 输出结构化 JSON 数据供上层程序或 Agent 管道解析
-python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --all --json
+uv run python scripts/zte_client.py -p "<ROUTER_PASSWORD>" --all --json
 ```
 
 ---

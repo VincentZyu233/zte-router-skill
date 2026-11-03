@@ -47,11 +47,22 @@
 
 ## 🚀 快速上手 (Quickstart)
 
+> [!TIP]
+> **先决条件：请先安装 `uv`**
+> 本项目全面采用高性能 Python 工具链 [`uv`](https://github.com/astral-sh/uv)。在运行以下命令前，请确保环境中已安装 `uv`：
+> ```bash
+> # Windows (PowerShell)
+> powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+>
+> # Linux / macOS
+> curl -LsSf https://astral.sh/uv/install.sh | sh
+> ```
+
 ### 1. 依赖安装
 
-仅依赖标准网络请求库 `requests`：
+使用 `uv pip` 快速安装依赖：
 ```bash
-pip install requests
+uv pip install requests
 ```
 
 ### 2. 命令行使用 (CLI)
@@ -61,13 +72,13 @@ pip install requests
 export ZTE_ROUTER_PASSWORD="your_password_here"
 
 # 1. 查看路由器硬件信息与连续开机时间
-python scripts/zte_client.py --info
+uv run python scripts/zte_client.py --info
 
 # 2. 列出局域网内所有连接的主机终端（在线状态、MAC、真实主机名）
-python scripts/zte_client.py --devices
+uv run python scripts/zte_client.py --devices
 
 # 3. 输出结构化 JSON 数据供脚本与管道二次解析
-python scripts/zte_client.py --all --json
+uv run python scripts/zte_client.py --all --json
 ```
 
 ---
